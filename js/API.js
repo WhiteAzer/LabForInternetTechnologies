@@ -28,6 +28,10 @@ function SelectAdd(DataArray, DOMElement) {
     });
 }
 
+function dateFormatter(numb) {
+    return [...`${numb}`].length > 1 ? numb : '0' + numb;
+}
+
 let companyNames1 = GetAPI("https://sedelkin.ru/api/security_list", ".API__form-names1");
 let companyNames2 = GetAPI("https://sedelkin.ru/api/security_list", ".API__form-names2");
 
@@ -52,9 +56,8 @@ btn.addEventListener("click", function () {
     let interval = document.querySelector(".API__form-interval").value;
     let limits = document.querySelector(".API__form-limits").value;
     let start = document.querySelector(".API__form-start").value;
-    // let date = new Date();
-    // let finish = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
-    let finish = "2022-01-01";
+    let date = new Date();
+    let finish = [date.getFullYear(), dateFormatter(date.getMonth() + 1), dateFormatter(date.getDate())].join('-');
 
     body1.append("app_key", "lpDRhW4f%5Bj|i8mB~BjlCD#Ve6wAi");
     body1.append("secid", secid1);
