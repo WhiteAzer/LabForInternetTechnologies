@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1</title>
+    <link rel="stylesheet" href="styles/css/index.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper container">
+            <img src="img/logo.png" alt="logo" class="header__logo">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="index.html" class="header__list-link">
+                            Статья
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="statistics.html" class="header__list-link">
+                            Статистика
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="notes.html" class="header__list-link">
+                            Заметки
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="questionnaire.html" class="header__list-link">
+                            Анкета
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="API.html" class="header__list-link">
+                            Внешнее API
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="questionnaire__wrappper container">
+            <h1 class="questionnaire__title main__title">
+                Регистрация нового пользователя
+            </h1>
+            <form class="questionnaire__form" action="i.php" enctype="multipart/form-data" method="post">
+
+                <div class="questionnaire__form-group">
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Имя
+                        </span>
+                        <input type="text" class="questionnaire__form-input" pattern="^[A-Za-zА-Яа-яЁё]+$" name="name"
+                            required></label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Фамилия
+                        </span>
+                        <input type="text" class="questionnaire__form-input" pattern="^[A-Za-zА-Яа-яЁё]+$"
+                            name="surname" required></label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Отчество (необязательно)
+                        </span>
+                        <input type="text" class="questionnaire__form-input" pattern="^[A-Za-zА-Яа-яЁё]+$"
+                            name="patronymic"></label>
+                </div>
+
+                <div class="questionnaire__form-group">
+                    <label class="questionnaire__form-label" placeholder="you@example.com">
+                        <span class="questionnaire__form-label-text">
+                            Email
+                        </span>
+                        <input type="email" class="questionnaire__form-input" name="email" required>
+                    </label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Пароль
+                        </span>
+                        <input type="password" class="questionnaire__form-input" name="password" required>
+                    </label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Повторите пароль
+                        </span>
+                        <input type="password" class="questionnaire__form-input" name="repeatPassword" required>
+                    </label>
+                </div>
+
+                <div class="questionnaire__form-group">
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Роль пользователя
+                        </span>
+                        <select name="role" class="questionnaire__form-select">
+                            <option checked>Выберите роль...</option>
+                            <option value="Роль1">Роль 1</option>
+                            <option value="Роль2">Роль 2</option>
+                            <option value="Роль3">Роль 3</option>
+                        </select>
+                    </label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Репутация прользователя
+                        </span>
+                        <input type="number" class="questionnaire__form-input" min="1" max="10" name="reputation">
+                    </label>
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Дата смены пароля
+                        </span>
+                        <input type="date" class="questionnaire__form-input" name="date">
+                    </label>
+                </div>
+
+                <div class="questionnaire__form-group">
+                    <div class="questionnaire__form-radio">
+                        <p class="questionnaire__form-radio-text">
+                            <span class="questionnaire__form-label-text">
+                                Какой ВУЗ лучше всех?
+                            </span>
+                        </p>
+                        <label class="questionnaire__form-radio-text">
+                            <input type="radio" value="MIT" name="univercity1">
+                            MIT
+                        </label>
+                        <label class="questionnaire__form-radio-text">
+                            <input type="radio" value="ИТМО" name="univercity1">
+                            ИТМО
+                        </label>
+                        <label class="questionnaire__form-radio-text">
+                            <input type="radio" value="ВОЕНМЕХ" name="univercity1" checked>
+                            ВОЕНМЕХ
+                        </label>
+                    </div>
+
+                    <label class="questionnaire__form-label questionnaire__form-datalist">
+                        <span class="questionnaire__form-label-text">
+                            Какой ВУЗ лучше всех?
+                        </span>
+                        <input type="text" list="Univercity-2" class="questionnaire__form-input" name="univercity2" pattern="ВОЕНМЕХ">
+                        <datalist id="Univercity-2">
+                            <option value="MIT">MIT</option>
+                            <option value="ИТМО">ИТМО</option>
+                            <option value="ВОЕНМЕХ">ВОЕНМЕХ</option>
+                        </datalist>
+                    </label>
+                </div>
+
+                <div class="questionnaire__form-group questionnaire__form-file">
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Аватар пользователя
+                        </span>
+                        <input type="file" name="file">
+                    </label>
+                </div>
+
+                <div class="questionnaire__form-group questionnaire__form-textarea">
+                    <label class="questionnaire__form-label">
+                        <span class="questionnaire__form-label-text">
+                            Подпись пользователя
+                        </span>
+                        <textarea class="questionnaire__form-textarea-item" name="text"></textarea>
+                    </label>
+                </div>
+
+                <div class="questionnaire__form-group questionnaire__form-checkbox">
+                        <label class="questionnaire__form-label">
+                            <input type="checkbox" name="send" value="send">
+                            Отправить логин и пароль
+                        </label>
+                </div>
+
+                <div class="questionnaire__form-group">
+                    <input type="submit" value="Добавить пользователя"
+                        class="questionnaire__form-btn questionnaire__form-btn-add">
+                    <input type="reset" value="Отчистить форму"
+                        class="questionnaire__form-btn questionnaire__form-btn-clear">
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+Name: Тимур
+Surname: Мамедов
+Patronymic: Ровшанович
+Email: sdevsdv@afaef.dfafe
+Password: < ?php echo $
+Repeat password: купупкп
+Role: Роль2
+Reputation: 8
+Date: 2022-01-12
+First univercity: ВОЕНМЕХ
+Second univercity: ВОЕНМЕХ
+File: 
+Text: Военмех лучше всех!
+Send: send

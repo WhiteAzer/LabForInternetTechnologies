@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1</title>
+    <link rel="stylesheet" href="styles/css/index.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper container">
+            <img src="img/logo.png" alt="logo" class="header__logo">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="index.html" class="header__list-link">
+                            Статья
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="statistics.html" class="header__list-link">
+                            Статистика
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="notes.html" class="header__list-link">
+                            Заметки
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="questionnaire.html" class="header__list-link">
+                            Анкета
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="API.html" class="header__list-link">
+                            Внешнее API
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="main container">
+        <div class="API__wrapper">
+            <canvas id="myChart"></canvas>
+
+            <div class="API__form">
+                <label class="API__form-label">
+                    <span class="API__form-label-text">
+                        Наименование компании
+                    </span>
+                    <select name="name" class="API__form-select API__form-names1">
+                        <option checked>Выберите компанию...</option>
+                    </select>
+                    <select name="name" class="API__form-select API__form-names2">
+                        <option checked>Выберите компанию...</option>
+                    </select>
+                </label>
+
+                <label class="API__form-label">
+                    <span class="API__form-label-text">
+                        Интервал графика
+                    </span>
+                    <select name="name" class="API__form-select API__form-interval">
+                        <option checked>Выберите интервал...</option>
+                    </select>
+                </label>
+
+                <label class="API__form-label">
+                    <span class="API__form-label-text">
+                        Количество записей в ответе
+                    </span>
+                    <input type="number" class="API__form-input API__form-limits" min="1" max="1700" name="count">
+                    <span class="API__form-input-description">Допустимы значения от 1 до 1700</span>
+                </label>
+
+                <label class="API__form-label">
+                    <span class="API__form-label-text">
+                        Начиная с даты
+                    </span>
+                    <input type="date" class="API__form-input API__form-start" name="date">
+                </label>
+
+                <button class="API__form-btn">
+                    Получить данные
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/API.js"></script>
+</body>
+
+</html>

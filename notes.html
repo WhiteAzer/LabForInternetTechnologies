@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1</title>
+    <link rel="stylesheet" href="styles/css/index.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper container">
+            <img src="img/logo.png" alt="logo" class="header__logo">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="index.html" class="header__list-link">
+                            Статья
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="statistics.html" class="header__list-link">
+                            Статистика
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="notes.html" class="header__list-link">
+                            Заметки
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="questionnaire.html" class="header__list-link">
+                            Анкета
+                        </a>
+                    </li>
+
+                    <li class="header__list-item">
+                        <a href="API.html" class="header__list-link">
+                            Внешнее API
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="notes__wrappper container">
+            <h2 class="notes__title">
+                Заметки
+            </h2>
+            <div class="notes__btn-group">
+                <button class="notes__btn notes__btn-add">
+                    Добавить
+                </button>
+                <button class="notes__btn notes__btn-remove">
+                    Удалить
+                </button>
+            </div>
+            <div class="notes__group">
+                <div class="notes__group-item">
+                    <h3 class="notes__group-item-title">Заметка 1</h3>
+                    <textarea class="notes__group-item-text"></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/notes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
